@@ -16,7 +16,7 @@ It demonstrates fundamental concepts like sorting and stack operations in a clea
 ---
 
 ## 📁 Project Structure
-
+```bash
 DSAVisualizer/
 ├── Sorting/
 │ ├── BubbleSort.java
@@ -26,7 +26,7 @@ DSAVisualizer/
 │ └── QuickSort.java
 ├── Stack/
 │ └── StackImpl.java
-├── Main.java
+├── Main.java ```
 
 
 
