@@ -43,6 +43,32 @@ I built this project to:
 
 ---
 
+
+---
+
+## 💡 What's Next
+
+> These features will be added in the next versions to expand the DSAVisualizer project:
+
+### 🔃 Core DSA Modules
+- [ ] Linked List (Singly, Doubly, Circular)
+- [ ] Queue and Deque (Array + Linked List based)
+- [ ] Tree Traversals (Inorder, Preorder, Postorder)
+- [ ] Binary Search Tree Operations
+- [ ] AVL Tree & Balanced BSTs
+- [ ] Heaps (Min-Heap, Max-Heap)
+- [ ] Graphs (BFS, DFS, Adjacency Matrix/List)
+- [ ] Tries (Prefix Trees)
+- [ ] Segment Trees
+
+### 🌟 Enhancements
+- [ ] GUI Integration (JavaFX / Web View)
+- [ ] Performance benchmarking between algorithms
+- [ ] Code modularity improvements
+- [ ] Add unit tests and error handling
+
+---
+
 ## 📌 How to Run
 
 Make sure you have Java installed.  
