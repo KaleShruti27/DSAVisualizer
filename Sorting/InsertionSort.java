@@ -1,31 +1,26 @@
 package Sorting;
+import java.util.*;
 
 public class InsertionSort {
-    public void sortAndVisualize(int[] arr) {
-        int n = arr.length;
-        System.out.println("Initial Array: " + arrayToString(arr));
+    public List<int[]> getSortingSteps(int[] input) {
+        List<int[]> steps = new ArrayList<>();
+        int[] arr = Arrays.copyOf(input, input.length);
+        steps.add(Arrays.copyOf(arr, arr.length));
 
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i < arr.length; i++) {
             int key = arr[i];
             int j = i - 1;
 
             while (j >= 0 && arr[j] > key) {
                 arr[j + 1] = arr[j];
                 j--;
+                steps.add(Arrays.copyOf(arr, arr.length));
             }
+
             arr[j + 1] = key;
-
-            System.out.println("Pass " + i + ": " + arrayToString(arr));
+            steps.add(Arrays.copyOf(arr, arr.length));
         }
 
-        System.out.println("Sorted Array: " + arrayToString(arr));
-    }
-
-    private String arrayToString(int[] arr) {
-        StringBuilder sb = new StringBuilder();
-        for (int num : arr) {
-            sb.append(num).append(" ");
-        }
-        return sb.toString().trim();
+        return steps;
     }
 }

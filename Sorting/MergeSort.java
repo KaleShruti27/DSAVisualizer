@@ -1,45 +1,40 @@
 package Sorting;
-
-import java.util.Arrays;
+import java.util.*;
 
 public class MergeSort {
-    public void sortAndVisualize(int[] arr) {
-        System.out.println("Initial Array: " + Arrays.toString(arr));
+    private List<int[]> steps;
+
+    public List<int[]> getSortingSteps(int[] input) {
+        int[] arr = Arrays.copyOf(input, input.length);
+        steps = new ArrayList<>();
+        steps.add(Arrays.copyOf(arr, arr.length));
         mergeSort(arr, 0, arr.length - 1);
-        System.out.println("Final Sorted Array: " + Arrays.toString(arr));
+        return steps;
     }
 
     private void mergeSort(int[] arr, int left, int right) {
-        if (left >= right) return;
-
-        int mid = (left + right) / 2;
-
-        System.out.println("Dividing: " + Arrays.toString(Arrays.copyOfRange(arr, left, right + 1)));
-
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid + 1, right);
-
-        merge(arr, left, mid, right);
-
-        System.out.println("Merged [" + left + " to " + right + "]: " + Arrays.toString(Arrays.copyOfRange(arr, left, right + 1)));
+        if (left < right) {
+            int mid = (left + right) / 2;
+            mergeSort(arr, left, mid);
+            mergeSort(arr, mid + 1, right);
+            merge(arr, left, mid, right);
+            steps.add(Arrays.copyOf(arr, arr.length));
+        }
     }
 
     private void merge(int[] arr, int left, int mid, int right) {
-        int[] temp = new int[right - left + 1];
-        int i = left, j = mid + 1, k = 0;
+        int[] temp = Arrays.copyOf(arr, arr.length);
+        int i = left, j = mid + 1, k = left;
 
         while (i <= mid && j <= right) {
-            if (arr[i] <= arr[j]) temp[k++] = arr[i++];
-            else temp[k++] = arr[j++];
+            if (temp[i] <= temp[j]) {
+                arr[k++] = temp[i++];
+            } else {
+                arr[k++] = temp[j++];
+            }
         }
 
-        while (i <= mid) temp[k++] = arr[i++];
-        while (j <= right) temp[k++] = arr[j++];
-
-        for (int t = 0; t < temp.length; t++) {
-            arr[left + t] = temp[t];
-        }
+        while (i <= mid) arr[k++] = temp[i++];
+        while (j <= right) arr[k++] = temp[j++];
     }
 }
-
-

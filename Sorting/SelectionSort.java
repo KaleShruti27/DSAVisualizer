@@ -1,33 +1,25 @@
 package Sorting;
+import java.util.*;
 
 public class SelectionSort {
-    public void sortAndVisualize(int[] arr) {
-        int n = arr.length;
-        System.out.println("Initial Array: " + arrayToString(arr));
+    public List<int[]> getSortingSteps(int[] input) {
+        List<int[]> steps = new ArrayList<>();
+        int[] arr = Arrays.copyOf(input, input.length);
+        steps.add(Arrays.copyOf(arr, arr.length));
 
-        for (int i = 0; i < n - 1; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[minIndex]) {
-                    minIndex = j;
+        for (int i = 0; i < arr.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[min]) {
+                    min = j;
                 }
             }
             int temp = arr[i];
-            arr[i] = arr[minIndex];
-            arr[minIndex] = temp;
-
-            System.out.println("Pass " + (i + 1) + ": " + arrayToString(arr));
+            arr[i] = arr[min];
+            arr[min] = temp;
+            steps.add(Arrays.copyOf(arr, arr.length));
         }
 
-        System.out.println("Sorted Array: " + arrayToString(arr));
-    }
-
-    private String arrayToString(int[] arr) {
-        StringBuilder sb = new StringBuilder();
-        for (int num : arr) {
-            sb.append(num).append(" ");
-        }
-        return sb.toString().trim();
+        return steps;
     }
 }
-
