@@ -1,80 +1,118 @@
-# DSAVisualizer
+# 📊 DSA Visualizer
 
-A terminal-based Java project to visualize core Data Structures and Algorithms (DSA).  
-It demonstrates fundamental concepts like sorting and stack operations in a clean, modular way.
+A fully interactive **Java Swing** application that visualizes how popular **sorting algorithms** work, step by step — designed for both learning and fun!
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- ✅ Java-based, modular design
-- ✅ Sorting algorithms: Bubble, Selection, Insertion, Merge, Quick
-- ✅ Stack operations via custom Stack implementation
-- ✅ Fully terminal-driven (no GUI) for deep DSA focus
-- ✅ Great for interview prep and portfolio building
+- 🎨 Visualizes 5 classic sorting algorithms:
+  - Bubble Sort
+  - Selection Sort
+  - Insertion Sort
+  - Merge Sort
+  - Quick Sort
+- 🧠 Custom array input (comma-separated)
+- 📈 Smooth animations using Java `Graphics`
+- 🔢 Values shown below each bar for clarity
+- 💙 Beautiful blue bars with clean font
+- 🧩 Modular folder structure for logic and GUI
+
+---
+
+## 📸 Preview
+
+### 🏠 Homepage
+![Homepage](screenshots/Homepage.png)
+
+---
+
+### 🔀 Merge Sort Visualization
+![Merge Sort](screenshots/MergeSort.png)
+
+---
+
+## 🛠️ How to Run
+
+> You must have **Java 8 or above** installed.
+
+### 🔹 Step 1: Clone the repo
+
+```bash
+git clone https://github.com/KaleShruti27/DSAVisualizer.git
+cd DSAVisualizer
+```
+
+### 🔹 Step 2: Compile the program
+
+```bash
+javac Main.java
+```
+
+### 🔹 Step 3: Run the program
+
+```bash
+java Main
+```
+
+🎉 A GUI will appear. Enter your custom array (like `50, 100, 80, 120`) and choose the sorting algorithm to visualize!
 
 ---
 
 ## 📁 Project Structure
-```bash
+
+```
 DSAVisualizer/
 ├── Sorting/
-│ ├── BubbleSort.java
-│ ├── SelectionSort.java
-│ ├── InsertionSort.java
-│ ├── MergeSort.java
-│ └── QuickSort.java
-├── Stack/
-│ └── StackImpl.java
-├── Main.java 
+│   ├── BubbleSort.java
+│   ├── SelectionSort.java
+│   ├── InsertionSort.java
+│   ├── MergeSort.java
+│   └── QuickSort.java
+├── screenshots/
+│   ├── Homepage.png
+│   └── MergeSort.png
+├── DSAVisualizerGUI.java   # Visualization panel
+├── Homepage.java           # GUI homepage with input and buttons
+├── Main.java               # Entry point
+├── README.md               # This file
 ```
 
+---
 
+## 🧠 Concepts Used
+
+- Java Swing (`JFrame`, `JPanel`, `JLabel`, `JButton`)
+- Java AWT (`Graphics`, `Font`, `Color`)
+- Custom repaint animation with `Thread.sleep()`
+- MVC-style separation (GUI ↔ logic)
 
 ---
 
-## 🧠 Why I Built This
+## 📌 Future Improvements
 
-As a B.Tech CSE student focused on cracking FAANG and top product-based companies,  
-I built this project to:
-
-- Reinforce my DSA concepts with hands-on coding
-- Apply OOP principles in real-world practice
-- Build a strong project for resume and GitHub portfolio
-
----
-
+- 🌀 Add Stack, Queue, and Tree visualizers
+- ⏩ Add animation speed slider
+- 🟩 Color-coding comparisons and swaps
+- ⏸ Pause / resume visualization
+- 📽️ Export as GIF
 
 ---
 
-## 💡 What's Next
+## 🤝 Contributing
 
-> These features will be added in the next versions to expand the DSAVisualizer project:
-
-### 🔃 Core DSA Modules
-- [ ] Linked List (Singly, Doubly, Circular)
-- [ ] Queue and Deque (Array + Linked List based)
-- [ ] Tree Traversals (Inorder, Preorder, Postorder)
-- [ ] Binary Search Tree Operations
-- [ ] AVL Tree & Balanced BSTs
-- [ ] Heaps (Min-Heap, Max-Heap)
-- [ ] Graphs (BFS, DFS, Adjacency Matrix/List)
-- [ ] Tries (Prefix Trees)
-- [ ] Segment Trees
-
-### 🌟 Enhancements
-- [ ] GUI Integration (JavaFX / Web View)
-- [ ] Performance benchmarking between algorithms
-- [ ] Code modularity improvements
-- [ ] Add unit tests and error handling
+Feel free to fork and improve the project — new visualizations or UI ideas are always welcome!
 
 ---
 
-## 📌 How to Run
+## 🙋‍♀️ Author
 
-Make sure you have Java installed.  
-Then open terminal in the project folder and run:
+**Shruti Kale**  
+👩‍💻 B.Tech CSE Student | Java Dev | DSA Enthusiast  
+📌 GitHub: [@KaleShruti27](https://github.com/KaleShruti27)
 
-```bash
-javac Main.java
-java Main
+---
+
+## 📄 License
+
+MIT License — use it freely for learning and building 🚀
