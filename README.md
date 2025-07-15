@@ -113,6 +113,4 @@ Feel free to fork and improve the project — new visualizations or UI ideas are
 
 ---
 
-## 📄 License
 
-MIT License — use it freely for learning and building 🚀
